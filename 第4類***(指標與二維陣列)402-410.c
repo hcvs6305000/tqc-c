@@ -1,4 +1,5 @@
-﻿//TQC C Exam-402解答示範
+//指標說明參考 https://kopu.chat/c%E8%AA%9E%E8%A8%80-%E8%B6%85%E5%A5%BD%E6%87%82%E7%9A%84%E6%8C%87%E6%A8%99%EF%BC%8C%E5%88%9D%E5%AD%B8%E8%80%85%E8%AB%8B%E9%80%B2%EF%BD%9E/
+//TQC C Exam-402
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -12,9 +13,64 @@ int main ()
     system("PAUSE");
     return 0;
 }
+
+//TQC C Exam-402解答示範============================
+#include <stdio.h>
+#include <stdlib.h>
  
+int main ()
+{
+    int num=100;
+    int *pointer;
+    pointer=&num;
+   
+    printf("num=%d, *pointer=%d\n", num, *pointer);
+    system("PAUSE");
+    return 0;
+}
 /*-------------------------------------------------------------*/
-//TQC C Exam-404解答示範
+//TQC C Exam-404
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () 
+{
+	int arr[2][3];
+	int i, j;
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+		    printf("請輸入陣列arr[%d][%d]元素值:", i, j);
+		    scanf("%d", &arr[i][j]);
+		}
+	}
+	
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+		      printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
+		}
+ 	}
+	
+	//另一種表示方法
+	printf("\n另一種表示方法\n");
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+			printf("arr[%d][%d]=%d\n", i, j, arr[i]+j);
+		}
+	}
+		
+	//第三種表示方法
+	printf("\n第三種表示方法\n");
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+			printf("arr[%d][%d]=%d\n", i, j, *(arr+i)+j);
+		}
+	}
+	
+	system("PAUSE");
+	return 0;
+}
+
+//TQC C Exam-404解答示範========================
 #include <stdio.h>
 #include <stdlib.h>
  
